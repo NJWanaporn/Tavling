@@ -1,0 +1,46 @@
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinn en semester med en lyxig husbil</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: url('https://images.unsplash.com/photo-1614852201148-0c1c1cb29e37') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 3rem;
+    }
+    form {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+      border-radius: 1rem;
+      display: inline-block;
+    }
+    input, select {
+      margin: 0.5rem;
+      padding: 0.5rem;
+      width: 80%;
+    }
+    button {
+      background: limegreen;
+      color: white;
+      padding: 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Vinn en semester med en lyxig husbil!</h1>
+  <form method="POST" action="/submit">
+    <input name="fornamn" placeholder="Förnamn" required><br>
+    <input name="efternamn" placeholder="Efternamn" required><br>
+    <input name="email" placeholder="Din e-post" required><br>
+    <input type="date" name="fodelsedag" required><br>
+    <label><input type="checkbox" name="samtycke" required> Jag godkänner villkoren</label><br>
+    <button type="submit">Fortsätt 100% gratis</button>
+  </form>
+</body>
+</html>

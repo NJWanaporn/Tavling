@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinn 10 000 kr hos ICA Maxi!</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -20,62 +19,83 @@
         }
     </style>
 </head>
-<body class="flex items-center justify-center min-h-screen p-4">
-    <div class="bg-white shadow-xl rounded-2xl overflow-hidden max-w-4xl w-full flex flex-col lg:flex-row transform transition-all duration-500 ease-in-out scale-100 hover:scale-105">
-        <!-- Vänster sektion - Banner/Info -->
-        <div class="lg:w-1/2 p-8 lg:p-12 gradient-bg text-white flex flex-col justify-center items-center text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 text-shadow-custom">
-                Vinn ett presentkort!
-            </h1>
-            <p class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-yellow-300 text-shadow-custom">
-                10 000 kr hos ICA Maxi
-            </p>
-            <div class="relative w-48 h-48 sm:w-64 sm:h-64 mb-6">
-                <!-- Placeholder för ICA Maxi logotyp eller presentkort bild -->
-                <img src="https://placehold.co/256x256/f0fdf4/00703C?text=ICA+Maxi" alt="ICA Maxi Presentkort" class="rounded-full shadow-lg border-4 border-yellow-300 w-full h-full object-cover">
+<body class="flex flex-col min-h-screen"> <header class="w-full bg-white shadow-md py-4">
+        <nav class="container mx-auto flex justify-center space-x-6">
+            <a href="index.html" class="text-gray-700 hover:text-green-600 font-semibold text-lg transition-colors duration-300">Hem</a>
+            <a href="villkor.php" class="text-gray-700 hover:text-green-600 font-semibold text-lg transition-colors duration-300">Villkor</a>
+            <a href="integritetspolicy.php" class="text-gray-700 hover:text-green-600 font-semibold text-lg transition-colors duration-300">Integritetspolicy</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center p-4"> <div class="bg-white shadow-xl rounded-2xl overflow-hidden max-w-4xl w-full flex flex-col lg:flex-row transform transition-all duration-500 ease-in-out scale-100 hover:scale-105">
+            <div class="lg:w-1/2 p-8 lg:p-12 gradient-bg text-white flex flex-col justify-center items-center text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 text-shadow-custom">
+                    Vinn ett presentkort!
+                </h1>
+                <p class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-yellow-300 text-shadow-custom">
+                    10 000 kr hos ICA Maxi
+                </p>
+                <div class="relative w-48 h-48 sm:w-64 sm:h-64 mb-6">
+                    <img src="https://placehold.co/256x256/f0fdf4/00703C?text=ICA+Maxi" alt="ICA Maxi Presentkort" class="rounded-full shadow-lg border-4 border-yellow-300 w-full h-full object-cover">
+                </div>
+                <p class="text-base sm:text-lg mb-4">
+                    Missa inte chansen att vinna ett fantastiskt presentkort på 10 000 kr att handla för hos din närmsta ICA Maxi!
+                </p>
+                <p class="text-sm">
+                    Fyll i formuläret för att delta i tävlingen. Lycka till!
+                </p>
             </div>
-            <p class="text-base sm:text-lg mb-4">
-                Missa inte chansen att vinna ett fantastiskt presentkort på 10 000 kr att handla för hos din närmsta ICA Maxi!
-            </p>
-            <p class="text-sm">
-                Fyll i formuläret för att delta i tävlingen. Lycka till!
+
+            <div class="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center items-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Delta i tävlingen!</h2>
+
+                <form id="icaMaxiForm" class="w-full max-w-md">
+                    <div class="mb-5">
+                        <label for="namn" class="block text-gray-700 text-sm font-semibold mb-2">Namn:</label>
+                        <input type="text" id="namn" name="Namn" class="shadow-sm appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" placeholder="Ditt fullständiga namn" required>
+                    </div>
+                    <div class="mb-5">
+                        <label for="adress" class="block text-gray-700 text-sm font-semibold mb-2">Adress:</label>
+                        <input type="text" id="adress" name="Adress" class="shadow-sm appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" placeholder="Din adress" required>
+                    </div>
+                    <div class="mb-5">
+                        <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">E-post:</label>
+                        <input type="email" id="email" name="Email" class="shadow-sm appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" placeholder="din.email@exempel.com" required>
+                    </div>
+                    <div class="mb-5">
+                        <label for="fodselsedag" class="block text-gray-700 text-sm font-semibold mb-2">Födelsedag:</label>
+                        <input type="date" id="fodselsedag" name="Födelsedag" class="shadow-sm appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="telefon" class="block text-gray-700 text-sm font-semibold mb-2">Telefon:</label>
+                        <input type="tel" id="telefon" name="Telefon" class="shadow-sm appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" placeholder="07XXXXXXXX" required>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" name="samtycke" class="form-checkbox text-green-600 h-5 w-5" required>
+                            <span class="ml-2 text-gray-700 text-sm">Jag godkänner <a href="villkor.php" class="text-green-600 hover:underline">villkoren</a></span>
+                        </label>
+                    </div>
+
+                    <div class="flex items-center justify-center">
+                        <button type="submit" class="gradient-bg text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:shadow-outline hover:opacity-90 transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg">
+                            Delta nu!
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full bg-white shadow-inner py-6 mt-auto"> <div class="container mx-auto text-center text-gray-600 text-sm">
+            <p>&copy; 2025 Nordic Digital Marketing AB. All rights reserved. Org.nr: 025</p>
+            <p class="mt-2">
+                <a href="villkor.php" class="text-green-600 hover:underline">Villkor</a> |
+                <a href="integritetspolicy.php" class="text-green-600 hover:underline">Integritetspolicy</a>
             </p>
         </div>
-
-        <!-- Höger sektion - Formulär -->
-        <div class="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center items-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">Delta i tävlingen!</h2>
-
-            <form id="icaMaxiForm" class="w-full max-w-md">
-                <div class="mb-5">
-                    <label for="namn" class="block text-gray-700 text-sm font-semibold mb-2">Namn:</label>
-                    <input type="text" id="namn" name="Namn" class="shadow-sm appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" placeholder="Ditt fullständiga namn" required>
-                </div>
-                <div class="mb-5">
-                    <label for="adress" class="block text-gray-700 text-sm font-semibold mb-2">Adress:</label>
-                    <input type="text" id="adress" name="Adress" class="shadow-sm appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" placeholder="Din adress" required>
-                </div>
-                <div class="mb-5">
-                    <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">E-post:</label>
-                    <input type="email" id="email" name="Email" class="shadow-sm appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" placeholder="din.email@exempel.com" required>
-                </div>
-                <div class="mb-5">
-                    <label for="fodselsedag" class="block text-gray-700 text-sm font-semibold mb-2">Födelsedag:</label>
-                    <input type="date" id="fodselsedag" name="Födelsedag" class="shadow-sm appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" required>
-                </div>
-                <div class="mb-6">
-                    <label for="telefon" class="block text-gray-700 text-sm font-semibold mb-2">Telefon:</label>
-                    <input type="tel" id="telefon" name="Telefon" class="shadow-sm appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" placeholder="07XXXXXXXX" required>
-                </div>
-
-                <div class="flex items-center justify-center">
-                    <button type="submit" class="gradient-bg text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:shadow-outline hover:opacity-90 transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg">
-                        Delta nu!
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
+    </footer>
 
     <script>
         document.getElementById('icaMaxiForm').addEventListener('submit', function(event) {
